@@ -1,0 +1,33 @@
+﻿<Window x:Class="TaskManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1030">
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal">
+            <Image Source="Images/logo.png"/>
+            <Label Content="Планировщик задач" FontSize="64" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Margin="120 0 0 40" Orientation="Horizontal">
+            <Label Content="email:" FontSize="24"/>
+            <TextBox x:Name="email" Background="#86DDFF" Margin="64 0 0 0" Width="657" />
+        </StackPanel>
+        <StackPanel Margin="120 0 0 40" Orientation="Horizontal">
+            <Label Content="Пароль:" FontSize="24"/>
+            <TextBox x:Name="password" Background="#86DDFF" Margin="40 0 0 0" Width="657"/>
+        </StackPanel>
+        <Border CornerRadius="15" HorizontalAlignment="Right" Margin="0 0 100 0">
+            <Button Content="Войти в систему" Foreground="White" FontSize="24"  Width="249" Height="53"   Background="#00A9EC" Click="Button_Click">
+                <Button.Resources>
+                    
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Border>
+    </StackPanel>
+</Window>
